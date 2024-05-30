@@ -19,12 +19,12 @@ app.get("/api/v1/names/:id", (req, res)=>{
     const productName = productNames.find(productName => productName.id === id)
     if(!productName){
         return res.status(404).send({
-            status: "faild",
+            status: "failed",
             message: "Not found!"
         })
     }else{
         res.status(200).send({
-            status: "succes",
+            status: "success", 
             message: "Product name fetched successfully",
             data: {
                 productName,
